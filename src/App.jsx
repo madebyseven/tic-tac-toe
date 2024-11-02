@@ -9,6 +9,10 @@ import "./App.css";
 function App() {
   return (
     <main>
+      <header>
+        <img src="img.jpg" alt="img.jpg" />
+        <h1>Tic-Tac-Toe</h1>
+      </header>
       <div id="game-container">
         <ol id="players">
           <Player initialName="Player 1" symbol="X" />
