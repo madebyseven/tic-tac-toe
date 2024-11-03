@@ -6,17 +6,7 @@ const initialGameBoard = [
   [null, null, null],
 ];
 
-function GameBoard({ onSelectSquare, turns }) {
-  // deriving state from props
-  let gameBoard = initialGameBoard;
-
-  for (const turn of turns) {
-    const { square, player } = turn;
-    const { row, col } = square;
-
-    gameBoard[row][col] = player;
-  } // deriving state from props end
-
+function GameBoard({ onSelectSquare, board }) {
   //   const [gameBoard, setGameBoard] = useState(initialGameBoard);
   //   function handleSelectSquare(rowIndex, colIndex) {
   //     setGameBoard((prevGameBoard) => {
@@ -31,7 +21,7 @@ function GameBoard({ onSelectSquare, turns }) {
 
   return (
     <ol id="game-board">
-      {gameBoard.map((row, rowIndex) => (
+      {board.map((row, rowIndex) => (
         <li key={rowIndex}>
           <ol>
             {row.map((playerSymbol, colIndex) => (
