@@ -81,7 +81,7 @@ function App() {
   return (
     <main>
       <header>
-        <img src="img.jpg" alt="img.jpg" />
+        <img src="./public/game-logo.png" alt="img.jpg" />
         <h1>Tic-Tac-Toe</h1>
       </header>
       <div id="game-container">
